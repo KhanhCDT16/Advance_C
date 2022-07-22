@@ -114,9 +114,8 @@ void Xuat_Mang(int mang[], int size)
 }
 int main()
 {
-    int Max = 100;
     int size;
-    int Array[Max];
+    int Array[100];
     char Mang1[] = "khanh";
     char Mang2[] = "khanhcdt";
     char Mang3[] = "khanh";
