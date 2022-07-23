@@ -29,7 +29,7 @@ void push(int val,int Stack[])
     }
     else
     {
-       if (full(10))
+       if (full(Max))
         {
             printf("Stack is full\n");
         }
