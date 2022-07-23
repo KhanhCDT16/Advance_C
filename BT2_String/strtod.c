@@ -16,6 +16,19 @@ int test_strtod(const char mang[],char **string)
             *string = &mang[i];
             break;
        }
+       else if (mang[n-1] <57 && mang[n-1] > 48)
+       {
+            int j =0;
+         while (mang[n-1-j] <57 && mang[n-1-j] >48) j++;
+         while (mang[n-j] <57 && mang[n-j] >48)
+         {
+            value = value*10 + (mang[n-j]- 48);
+                    j--;
+         }
+           *string = &mang[0];
+           break;
+       }
+       
        else 
        {
             if (mang[i+1] <57 && mang[i+1] > 48)
@@ -36,10 +49,10 @@ int test_strtod(const char mang[],char **string)
 
 int main()
 {
-    char mang[30] = "123 say hello ";
+    char mang[30] = "say hello 123";
     char *ptr;
     int val;
     val = test_strtod(mang,&ptr);
     printf("%d\n",val);
-    printf("%s\n",ptr);
+    //printf("%s\n",ptr);
 }
