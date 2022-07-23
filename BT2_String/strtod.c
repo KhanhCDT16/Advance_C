@@ -1,5 +1,7 @@
 #include <stdio.h>
-int test_strtod(const char mang[],char **string)
+#include <stdlib.h>
+#include <string.h>
+int test_strtod (const char mang[],char **string)
 {
     int value = 0;
     int n = 0;
@@ -49,9 +51,10 @@ int test_strtod(const char mang[],char **string)
 
 int main()
 {
-    char mang[30] = "say hello 123";
+    char mang[30];
     char *ptr;
     int val;
+    strcpy(mang,"say hello 123");
     val = test_strtod(mang,&ptr);
     printf("%d\n",val);
     //printf("%s\n",ptr);
